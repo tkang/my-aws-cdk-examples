@@ -1,6 +1,6 @@
 # AWS CDK Python Examples
 
-![Stats](https://img.shields.io/badge/100-CDK_Projects-blue?style=for-the-badge)
+![Stats](https://img.shields.io/badge/117-CDK_Projects-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 
@@ -18,11 +18,15 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [api-gateway/logging-api-calls-to-cloudwatch-logs](./api-gateway/logging-api-calls-to-cloudwatch-logs/) | ![logging-api-calls-to-cloudwatch-logs](./api-gateway/logging-api-calls-to-cloudwatch-logs/logging-api-calls-to-cloudwatch-logs.svg) | api-gateway, cloudwatch logs subscription filters with kinesis data firehose |
 | [athena](./athena/) | ![athena-arch](./athena/aws-athena-arch.svg) | athena (named query, work group), s3 |
 | [batch/batch-with-ec2](./batch/batch-with-ec2/) | Launch AWS Batch | aws batch |
+| [bedrock/opensearch-serverless](./bedrock/cfn/opensearch-serverless/) | Launch Knowledge Bases for Amazon Bedrock using Amazon OpenSearch Serverless as a vector store| amazon bedrock, knowledge bases, opensearch serverless |
+| [bedrock/generative-ai-cdk-constructs](./bedrock/generative-ai-cdk-constructs) | Launch Knowledge Bases for Amazon Bedrock | amazon bedrock, knowledge bases |
 | [cloud9](./cloud9/) | ![cloud9](./cloud9/aws-cloud9.svg) | cloud9 |
 | [cloudfront/static-site](./cloudfront/static-site/) | ![cloudfront-s3-static-site-arch](./cloudfront/static-site/cloudfront-s3-static-site-arch.svg) | cloudfront |
 | [custom-resources/sagemaker-jumstart-model-deploy](./custom-resources/sagemaker-jumstart-model-deploy/) | Deploy SageMaker JumpStart Model with CDK Custom Resources | sagemaker jumpstart, cdk custom-resources |
 | [dms/aurora_mysql-to-kinesis](./dms/aurora_mysql-to-kinesis/) | ![dms-mysql-to-kinesis-arch](./dms/aurora_mysql-to-kinesis/dms-mysql-to-kinesis-arch.svg) | dms, mysql, kinesis |
 | [dms/aurora_mysql-to-s3](./dms/aurora_mysql-to-s3/) | ![dms-mysql-to-s3-arch](./dms/aurora_mysql-to-s3/dms-mysql-to-s3-arch.svg) | dms, mysql, s3 |
+| [dms-serverless/aurora_mysql-to-kinesis](./dms-serverless/aurora_mysql-to-kinesis/) | ![dms_serverless-mysql-to-kinesis-arch](./dms-serverless/aurora_mysql-to-kinesis/dms_serverless-mysql-to-kinesis-arch.svg) | dms serverless, mysql, kinesis |
+| [dms-serverless/aurora_mysql-to-s3](./dms-serverless/aurora_mysql-to-s3/) | ![dms_serverless-mysql-to-s3-arch](./dms-serverless/aurora_mysql-to-s3/dms_serverless-mysql-to-s3-arch.svg) | dms serverless, mysql, s3 |
 | [documentdb](./documentdb/) | ![documentdb-sagemaker-arch](./documentdb/documentdb-sagemaker-arch.svg) | documentdb(docdb), secerts manager, sagemaker|
 | [documentdb-elastic-clusters](./documentdb-elastic-clusters/) | ![docdb-elastic-arch](./documentdb-elastic-clusters/docdb-elastic-arch.svg) | documentdb elastic clusters(docdb-elastic), secerts manager|
 | [dynamodb](./dynamodb/) | ![dynamodb-arch](./dynamodb/dynamodb-arch.svg) | dynamodb |
@@ -31,6 +35,7 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [ec2/jenkins-on-ec2](./ec2/jenkins-on-ec2/) | ![jenkins-on-ec2](./ec2/jenkins-on-ec2/jenkins-on-ec2.svg) | jenkins, ec2 |
 | [ec2/jupyter-on-dlami](./ec2/jupyter-on-dlami/) | Launch Jupyter Server on Amazon Deep Learning AMI | jupyter, ec2, DLAMI |
 | [ec2/dlami-wth-aws-neuron](./ec2/dlami-wth-aws-neuron/) | Launch Jupyter Server on Amazon Deep Learning AMI with AWS Neuron | jupyter, ec2, DLAMI, AWS Neuron |
+| [ec2/stable-diffusion-webui-on-dlami](./ec2/stable-diffusion-webui-on-dlami/) | ![Stable_Diffusion_WebUI_Screenshot](./ec2/stable-diffusion-webui-on-dlami/SD-WebUI-Screenshot.png) | Stable Diffusion WebUI, ec2, DLAMI |
 | [ecs-patterns/alb-fargate-service](./ecs-patterns/alb-fargate-service/) | ![ecs-alb-fargate-service-arch](./ecs-patterns/alb-fargate-service/ecs-alb-fargate-service-arch.svg) | ecs patterns, Application Loadbalancer Fargate Service |
 | [ecs-patterns/nlb-fargate-service](./ecs-patterns/nlb-fargate-service/) | ![ecs-nlb-fargate-service-arch](./ecs-patterns/nlb-fargate-service/ecs-nlb-fargate-service-arch.svg)  | ecs patterns, Network Loadbalancer Fargate Service |
 | [elasticache/redis](./elasticache/redis/) | ![elasticache-redis-arch](./elasticache/redis/elasticache-for-redis-arch.svg) | redis |
@@ -73,7 +78,8 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [lambda/alb-path-routing-lambda](./lambda/alb-path-routing-lambda/) | ![alb-path-routing-lambda](./lambda/alb-path-routing-lambda/aws-alb-path-routing-lambda-arch.svg) | lambda, application load balancer |
 | [lambda/async-invoke](./lambda/async-invoke/) | ![aws-lambda-async-invocation](./lambda/async-invoke/aws-lambda-async-invocation.svg) | lambda, sns, event-bridge |
 | [lambda/lambda-custom-container](./lambda/lambda-custom-container/) | ![aws-lambda-custom-container](./lambda/lambda-custom-container/aws-lambda-custom-container.svg) | lambda, ecr, custom container |
-| [memorydb-for-redis](./memorydb/) | ![memorydb-for-redis](./memorydb/amazon-memorydb.svg) | memorydb |
+| [memorydb-for-redis](./memorydb/redis-cluster) | ![memorydb-for-redis](./memorydb/redis-cluster/amazon-memorydb.svg) | memorydb |
+| [memorydb-for-redis for vector search](./memorydb/vector-search) | ![memorydb-for-redis-for-vectorsearch](./memorydb/vector-search/amazon-memorydb.svg) | memorydb for vector search |
 | [msk](./msk/) | ![msk-arch](./msk/msk-arch.svg) | msk(kafka) |
 | [msk_aplha](./msk_alpha/) | ![msk-arch](./msk_alpha/msk-arch.svg) | msk(kafka) |
 | [msk-serverless](./msk-serverless/) | ![msk-serverless-arch](./msk-serverless/msk-serverless-arch.svg) | msk serverless(kafka) |
@@ -81,14 +87,15 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [neptune](./neptune/) | ![neptune-arch](./neptune/neptune-arch.svg) | sagemaker, neptune |
 | [rds/aurora_mysql](./rds/aurora_mysql/) | ![aurora_mysql](./rds/aurora_mysql/aurora_mysql-arch.svg) | aurora mysql, secrets manager |
 | [rds/aurora_postgresql](./rds/aurora_postgresql/) | ![aurora_postgresql](./rds/aurora_postgresql/aurora_postgresql-arch.svg) | aurora postgresql, secrets manager |
-| [aurora_serverless_v2/aurora_mysql-serverless_v2-cluster](./rds/aurora_serverless_v2/aurora_mysql-serverless_v2-cluster) | ![aurora_serverless_v2_cluster](./rds/aurora_serverless_v2/aurora_mysql-serverless_v2-cluster/aurora_mysql-serverless_v2-cluster-arch.svg) | aurora mysql serverless v2 cluster, secrets manager |
-| [aurora_serverless_v2/aurora_mysql-serverless_v2-replica](./rds/aurora_serverless_v2/aurora_mysql-serverless_v2-replica) | ![aurora_serverless_v2_replica](./rds/aurora_serverless_v2/aurora_mysql-serverless_v2-replica/aurora_mysql-with-serverless_v2-replica-arch.svg) | aurora mysql serverless v2, aurora mysql, secrets manager |
 | [rds/mariadb](./rds/mariadb/) | ![mariadb-arch](./rds/mariadb/mariadb-arch.svg) | mariadb, secrets manager |
 | [rds/rds_proxy-aurora_mysql](./rds/rds_proxy-aurora_mysql/) | ![rds_proxy-aurora_mysql](./rds/rds_proxy-aurora_mysql/rds_proxy-aurora_mysql-arch.svg) | rds-proxy, aurora mysql, secrets manager |
 | [rds/nginx-rds_proxy-aurora_mysql](./rds/nginx-rds_proxy-aurora_mysql/) | ![nginx-rds_proxy-aurora_mysql](./rds/nginx-rds_proxy-aurora_mysql/nginx-rds-proxy-aurora_mysql-arch.svg) | NGINX, aurora mysql, secrets manager |
 | [rds/sagemaker-aurora_mysql](./rds/sagemaker-aurora_mysql/) | ![sagemaker-aurora_mysql](./rds/sagemaker-aurora_mysql/mysql-sagemaker-arch.svg) | aurora mysql, secrets manager, sagemaker notebook |
 | [rds/sagemaker-aurora_postgresql](./rds/sagemaker-aurora_postgresql/) | ![sagemaker-aurora_postgresql](./rds/sagemaker-aurora_postgresql/postgresql-sagemaker-arch.svg) | aurora postgresql, secrets manager, sagemaker notebook |
 | [rds/sagemaker-studio-aurora_postgresql](./rds/sagemaker-studio-aurora_postgresql/) | ![sagemaker-studio-aurora_postgresql](./rds/sagemaker-studio-aurora_postgresql/postgresql-sagemaker-in-vpc-arch.svg) | aurora postgresql, secrets manager, sagemaker studio in vpc |
+| [aurora_serverless_v1/aurora_mysql-serverless_v1](./rds/aurora_serverless_v1/aurora_mysql-serverless_v1) | ![aurora_mysql_serverless_v1](./rds/aurora_serverless_v1/aurora_mysql-serverless_v1/aurora_mysql-serverless_v1-cluster-arch.svg) | aurora mysql serverless v1 cluster, secrets manager |
+| [aurora_serverless_v2/aurora_mysql-serverless_v2-replica](./rds/aurora_serverless_v2/aurora_mysql-serverless_v2-replica) | ![aurora_serverless_v2_replica](./rds/aurora_serverless_v2/aurora_mysql-serverless_v2-replica/aurora_mysql-with-serverless_v2-replica-arch.svg) | aurora mysql serverless v2, aurora mysql, secrets manager |
+| [aurora_serverless_v2/aurora_postgresql-serverless_v2](./rds/aurora_serverless_v2/aurora_postgresql-serverless_v2) | ![aurora_postgresql_serverless_v2](./rds/aurora_serverless_v2/aurora_postgresql-serverless_v2/aurora_postgresql-serverless_v2-cluster-arch.svg) | aurora postgresql serverless v2 cluster, secrets manager |
 | [redshift/cfn](./redshift/cfn) | ![redshift-cfn-arch](./redshift/cfn/redshift-cfn-arch.svg) | redshift |
 | [redshift/alpha](./redshift/redshift_alpha/) | ![redshift-cfn-arch](./redshift/redshift_alpha/redshift-alpha-arch.svg) | redshift |
 | [redshift-serverless](./redshift-serverless/) | ![redshift-serverless-arch](./redshift-serverless/redshift-serverless-arch.svg) | redshift-serverless |
@@ -102,9 +109,16 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [sagemaker/sagemaker-glue](./sagemaker/sagemaker-glue/) | ![studio-glue-arch](./sagemaker/sagemaker-glue/sagemaker-glue-arch.svg)  | sagemaker studio, aws glue |
 | [sagemaker/mlflow-ec2-sagemaker](./sagemaker/mlflow-ec2-sagemaker/) | ![mlflow-sagemaker-arch](./sagemaker/mlflow-ec2-sagemaker/mlflow-sagemaker-arch.svg) | MLflow, sagemaker studio |
 | [sagemaker/mlflow-ecs-sagemaker](./sagemaker/mlflow-ecs-sagemaker/) | ![mlflow-ecs-sagemaker-arch](./sagemaker/mlflow-ecs-sagemaker/mlflow-ecs-sagemaker-arch.svg) | MLflow, ecs, fargate, sagemaker studio |
-
+| [sagemaker-async-inference/jumpstart](./sagemaker/model-inference-endpoints/sagemaker-async-inference/jumpstart) | Asynchronous Inference using SageMaker JumpStart | sagemaker async endpoint, jumpstart |
+| [sagemaker-async-inference/hugging-face](./sagemaker/model-inference-endpoints/sagemaker-async-inference/hugging-face) | Asynchronous Inference using Hugging Face DLC | sagemaker async endpoint, hugging face |
+| [sagemaker-async-inference/pytorch](./sagemaker/model-inference-endpoints/sagemaker-async-inference/pytorch) | Asynchronous Inference using PyTorch DLC | sagemaker async endpoint, pytorch |
+| [sagemaker-realtime-inference/jumpstart](./sagemaker/model-inference-endpoints/sagemaker-realtime-inference/jumpstart) | Real-time Inference using SageMaker JumpStart | sagemaker real-time endpoint, jumpstart |
+| [sagemaker-realtime-inference/hugging-face](./sagemaker/model-inference-endpoints/sagemaker-realtime-inference/hugging-face) | Real-time Inference using Hugging Face DLC | sagemaker real-time endpoint, hugging face |
+| [sagemaker-realtime-inference/pytorch](./sagemaker/model-inference-endpoints/sagemaker-realtime-inference/pytorch) | Real-time Inference using PyTorch DLC | sagemaker real-time endpoint, pytorch |
+| [sagemaker-inference-component](./sagemaker/inference-component) | ![](./sagemaker/inference-component/sagemaker-inference-component.gif) | sagemaker real-time endpoint, inference component, multiple FMs on the same instance |
 
 Enjoy!
+
 
 ## Useful commands
 
@@ -112,6 +126,27 @@ Enjoy!
  * `npm install -g aws-cdk@latest`   Install the latest AWS CDK Toolkit (the `cdk`command).
  * `cdk init app --language python`  Create a new, empty CDK Python project.
  * `cdk bootstrap --profile <AWS Profile>` Deploys the CDK Toolkit staging stack; see [Bootstrapping](https://docs.aws.amazon.com/cdk/v2/guide/bootstrapping.html)
+
+
+## How to fetch specific source directories
+
+This repository is huge, containing a vast number of files, making it a `monorepo`.
+Consequently, if you wish to fetch specific source directories instead of downloading the entire repository,
+we recommend using the `git sparse-checkout` command.
+
+For example, let's say you want to clone the `cognito-api-lambda` project in `api-gateway` directory.
+
+In that case, open your terminal and run the following command.
+
+   ```
+   git clone https://github.com/ksmin23/my-aws-cdk-examples.git
+   cd my-aws-cdk-examples
+   git sparse-checkout init --cone
+   git sparse-checkout set api-gateway/cognito-api-lambda
+   ```
+
+:information_source: For more information about `git sparse-checkout`, see [this article](https://github.blog/2020-01-17-bring-your-monorepo-down-to-size-with-sparse-checkout/).
+
 
 ## References
 

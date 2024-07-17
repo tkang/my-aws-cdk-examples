@@ -60,7 +60,7 @@ them to your `setup.py` file and rerun the `pip install -r requirements.txt`
 command.
 
 ### A note about Service-Linked Role
-Some cluster configurations (e.g VPC access) require the existence of the `AWSServiceRoleForAmazonElasticsearchService` Service-Linked Role.
+Some cluster configurations (e.g VPC access) require the existence of the `AWSServiceRoleForAmazonOpenSearchService` Service-Linked Role.
 
 When performing such operations via the AWS Console, this SLR is created automatically when needed. However, this is not the behavior when using CloudFormation. If an SLR(Service-Linked Role) is needed, but doesn’t exist, you will encounter a failure message simlar to:
 
@@ -71,8 +71,10 @@ Before you can proceed, you must enable a service-linked role to give Amazon Ope
 To resolve this, you need to [create](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html#create-service-linked-role) the SLR. We recommend using the AWS CLI:
 
 ```
-aws iam create-service-linked-role --aws-service-name es.amazonaws.com
+aws iam create-service-linked-role --aws-service-name opensearchservice.amazonaws.com
 ```
+
+:information_source: For more information, see [here](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/slr.html).
 
 ## Clean Up
 
@@ -146,7 +148,7 @@ Enjoy!
          $ mssh --region us-east-1 ec2-user@i-0203f0d6f37ccbe5b -N -L 9200:vpc-retail-qvwlxanar255vswqna37p2l2cy.us-east-1.es.amazonaws.com:443
          ```
 2. Connect to `https://localhost:9200/_dashboards/app/login?` in a web browser.
-3. Enter the master user and password that you set up when you created the Amazon OpenSearch Service endpoint. The user and password is stored in the [AWS Secrets Manager](https://console.aws.amazon.com/secretsmanager/listsecrets) as a name such as `OpenSearchMasterUserSecret1-xxxxxxxxxxxx`.
+3. Enter the master user and password that you set up when you created the Amazon OpenSearch Service endpoint. The user and password are stored in the [AWS Secrets Manager](https://console.aws.amazon.com/secretsmanager/listsecrets) as a name such as `OpenSearchMasterUserSecret1-xxxxxxxxxxxx`.
 4. In the Welcome screen, click the toolbar icon to the left side of **Home** button. Choose **Stack Managerment**
    ![ops-dashboards-sidebar-menu](./resources/ops-dashboards-sidebar-menu.png)
 5. After selecting **Advanced Settings** from the left sidebar menu, set **Timezone** for date formatting to `Etc/UTC`.
@@ -217,6 +219,10 @@ Enjoy!
 
 
 ## References
+
+- [Operational best practices for Amazon OpenSearch Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/bp.html)
+  - [Sizing Amazon OpenSearch Service domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/sizing-domains.html)
+  - [동작 방식과 함께 알아보는 최적의 Amazon OpenSearch Service 사이징 (2024-04-26)](https://aws.amazon.com/ko/blogs/tech/opensearch-sizing/)
 - [Windows SSH / Tunnel for Kibana Instructions - Amazon Elasticsearch Service](https://search-sa-log-solutions.s3-us-east-2.amazonaws.com/logstash/docs/Kibana_Proxy_SSH_Tunneling_Windows.pdf)
 - [Use an SSH Tunnel to access Kibana within an AWS VPC with PuTTy on Windows](https://amazonmsk-labs.workshop.aws/en/mskkdaflinklab/createesdashboard.html)
 - [OpenSearch Popular APIs](https://opensearch.org/docs/latest/opensearch/popular-api/)
@@ -229,6 +235,7 @@ Enjoy!
     GET _cat/plugins?v
     </pre>
 - [Amazon OpenSearch Service - Importing and associating packages](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/custom-packages.html#custom-packages-assoc)
+  - [Amazon OpenSearch Service, 한국어 분석을 위한 '노리(Nori)' 플러그인 활용 (2023-11-23)](https://aws.amazon.com/ko/blogs/tech/amazon-opensearch-service-korean-nori-plugin-for-analysis/)
 - [Connect using the EC2 Instance Connect CLI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html#ec2-instance-connect-connecting-ec2-cli)
    <pre>
    $ sudo pip install ec2instanceconnectcli
