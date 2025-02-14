@@ -3,7 +3,7 @@
 
 ![amazon-memorydb-for-redis](./amazon-memorydb.svg)
 
-This is a collection of projects for Python development with CDK.
+This is a CDK Python project for Amazon MemoryDB for Redis OSS cluster.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
@@ -50,15 +50,22 @@ For example:
 <pre>
 {
   "memorydb_user_name": "<i>memdb-admin</i>",
-  "memorydb_cluster_name": "<i>vectordb</i>"
+  "memorydb": {
+    "node_type": "db.r7g.xlarge",
+    "cluster_name": <i>"redisdb"</i>,
+    "engine": "Redis",
+    "engine_version": "7.1",
+    "num_shards": 3,
+    "num_replicas_per_shard": 1
+  }
 }
 </pre>
 
-Now this point you can now synthesize the CloudFormation template for this code.
+At this point you can now synthesize the CloudFormation template for this code.
 
 ```
 (.venv) $ export CDK_DEFAULT_ACCOUNT=$(aws sts get-caller-identity --query Account --output text)
-(.venv) $ export CDK_DEFAULT_REGION=us-east-1 # your-aws-account-region
+(.venv) $ export CDK_DEFAULT_REGION=$(aws configure get region)
 (.venv) $ cdk synth --all
 ```
 
@@ -80,9 +87,9 @@ All MemoryDB clusters run in a virtual private cloud (VPC). You need to EC2 inst
 ### Connect to Amazon MemoryDB using Redis command line interface
 
 <pre>
-$ wget https://download.redis.io/releases/redis-6.2.6.tar.gz
-$ tar -xzvf redis-6.2.6.tar.gz
-$ cd redis-6.2.6
+$ wget https://download.redis.io/releases/redis-7.0.15.tar.gz
+$ tar -xzvf redis-7.0.15.tar.gz
+$ cd redis-7.0.15
 $ make MALLOC=jemalloc BUILD_TLS=yes
 $ sudo make install
 $ redis-cli -c --tls -h <i>memorydb-cluster-endpoint</i> --user <i>'user-name'</i> --askpass
@@ -104,15 +111,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> db_username = 'user-name'
 >>> db_password = 'user-password'
 >>> redis_cluster_options = {
-...   'startup_nodes': [{"host": db_host, "port": db_port}],
-...   'decode_responses': True,
-...   'skip_full_coverage_check': True,
-...   'ssl': True,
-...   'username': db_username,
-...   'password': db_password
-... }
->>> redis = RedisCluster(**redis_cluster_options)
->>> if redis.ping():
+    'startup_nodes': [{"host": db_host, "port": db_port}],
+    'decode_responses': True,
+    'skip_full_coverage_check': True,
+    'ssl': True,
+    'username': db_username,
+    'password': db_password
+  }
+>>> redis_client = RedisCluster(**redis_cluster_options)
+>>> if redis_client.ping():
 ...     print("Connected to Redis")
 ...
 Connected to Redis
@@ -131,9 +138,10 @@ Connected to Redis
 
  * [Introducing Amazon MemoryDB for Redis – A Redis-Compatible, Durable, In-Memory Database Service](https://aws.amazon.com/blogs/aws/introducing-amazon-memorydb-for-redis-a-redis-compatible-durable-in-memory-database-service/)
  * [Build with Redis data structures for microservices using Amazon MemoryDB for Redis and Amazon ECS](https://aws.amazon.com/blogs/database/build-with-redis-data-structures-for-microservices-using-amazon-memorydb-for-redis-and-amazon-ecs/)
- * [Amazon MemoryDB for Redis - Authenticating users with Access Control Lists (ACLs)](https://docs.aws.amazon.com/memorydb/latest/devguide/clusters.acls.html)
- * [Amazon MemoryDB for Redis engine versions](https://docs.aws.amazon.com/memorydb/latest/devguide/engine-versions.html)
+ * [Amazon MemoryDB Engine versions](https://docs.aws.amazon.com/memorydb/latest/devguide/engine-versions.html)
+ * [Amazon MemoryDB Restricted commands](https://docs.aws.amazon.com/memorydb/latest/devguide/restrictedcommands.html)
  * [Amazon MemoryDB for Redis Samples](https://github.com/aws-samples/amazon-memorydb-for-redis-samples)
+ * [Amazon MemoryDB - Authenticating users with Access Control Lists (ACLs)](https://docs.aws.amazon.com/memorydb/latest/devguide/clusters.acls.html)
  * [Redis ACL](https://redis.io/topics/acl)
  * [Redis Documentation](https://redis.io/documentation)
 

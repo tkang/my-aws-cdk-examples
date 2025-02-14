@@ -1,6 +1,6 @@
 # AWS CDK Python Examples
 
-![Stats](https://img.shields.io/badge/118-CDK_Projects-blue?style=for-the-badge)
+![Stats](https://img.shields.io/badge/129-CDK_Projects-blue?style=for-the-badge)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 
@@ -22,6 +22,7 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [bedrock/generative-ai-cdk-constructs](./bedrock/generative-ai-cdk-constructs) | Launch Knowledge Bases for Amazon Bedrock | amazon bedrock, knowledge bases |
 | [cloud9](./cloud9/) | ![cloud9](./cloud9/aws-cloud9.svg) | cloud9 |
 | [cloudfront/static-site](./cloudfront/static-site/) | ![cloudfront-s3-static-site-arch](./cloudfront/static-site/cloudfront-s3-static-site-arch.svg) | cloudfront |
+| [cognito](./cognito/) | Deploy Amazon Cognito that is an identity platform for web and mobile apps | cognito |
 | [custom-resources/sagemaker-jumstart-model-deploy](./custom-resources/sagemaker-jumstart-model-deploy/) | Deploy SageMaker JumpStart Model with CDK Custom Resources | sagemaker jumpstart, cdk custom-resources |
 | [dms/aurora_mysql-to-kinesis](./dms/aurora_mysql-to-kinesis/) | ![dms-mysql-to-kinesis-arch](./dms/aurora_mysql-to-kinesis/dms-mysql-to-kinesis-arch.svg) | dms, mysql, kinesis |
 | [dms/aurora_mysql-to-s3](./dms/aurora_mysql-to-s3/) | ![dms-mysql-to-s3-arch](./dms/aurora_mysql-to-s3/dms-mysql-to-s3-arch.svg) | dms, mysql, s3 |
@@ -37,8 +38,11 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [ec2/dlami-wth-aws-neuron](./ec2/dlami-wth-aws-neuron/) | Launch Jupyter Server on Amazon Deep Learning AMI with AWS Neuron | jupyter, ec2, DLAMI, AWS Neuron |
 | [ec2/stable-diffusion-webui-on-dlami](./ec2/stable-diffusion-webui-on-dlami/) | ![Stable_Diffusion_WebUI_Screenshot](./ec2/stable-diffusion-webui-on-dlami/SD-WebUI-Screenshot.png) | Stable Diffusion WebUI, ec2, DLAMI |
 | [ecr](./ecr/) | upload Docker image into Amazon ECR Repository | ecr |
+| [ecs/alb-ec2-service](./ecs/alb-ec2-service) | Application Load Balanced EC2 Service on ECS | ecr, ecs, Applicaton Loadbalancer EC2 Service |
+| [ecs/ec2-service-with-service-discovery](./ecs/ec2-service-with-service-discovery) | EC2 Service with Task Networking on ECS | ecr, ecs, service discovery, EC2 Service |
 | [ecs-patterns/alb-fargate-service](./ecs-patterns/alb-fargate-service/) | ![ecs-alb-fargate-service-arch](./ecs-patterns/alb-fargate-service/ecs-alb-fargate-service-arch.svg) | ecs patterns, Application Loadbalancer Fargate Service |
 | [ecs-patterns/nlb-fargate-service](./ecs-patterns/nlb-fargate-service/) | ![ecs-nlb-fargate-service-arch](./ecs-patterns/nlb-fargate-service/ecs-nlb-fargate-service-arch.svg)  | ecs patterns, Network Loadbalancer Fargate Service |
+| [ecs-patterns/fargate-service-with-efs](./ecs-patterns/fargate-service-with-efs/) | a Public Facing load balanced Fargate service with an EFS Filesystem mount | ecs patterns, Application Loadbalancer Fargate Service, efs |
 | [elasticache/redis](./elasticache/redis/) | ![elasticache-redis-arch](./elasticache/redis/elasticache-for-redis-arch.svg) | redis |
 | [elasticache/redis-primary-replica](./elasticache/redis-primary-replica/) | ![elasticache-redis-primary-replica-arch](./elasticache/redis-primary-replica/elasticache-for-redis-primary-replica-arch.svg) | redis primary-replica cluster |
 | [elasticache/redis-cluster](./elasticache/redis-cluster/) | ![elasticache-redis-cluster-arch](./elasticache/redis-cluster/elasticache-for-redis-cluster-arch.svg) | redis-cluster |
@@ -72,6 +76,7 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [kinesis-data-firehose/opskk-stack](./kinesis-data-firehose/opskk-stack/) | ![amazon-opskk-stack-arch](./kinesis-data-firehose/opskk-stack/amazon-opskk-stack-arch.svg) | kinesis firehose, s3, OpenSearch, bastion host |
 | [kinesis-data-firehose/msk-firehose-s3-stack](./kinesis-data-firehose/msk-firehose-s3-stack/) | ![msk-firehose-s3-arch](./kinesis-data-firehose/msk-firehose-s3-stack/msk-firehose-s3-arch.svg) | msk, kinesis firehose, s3, bastion host |
 | [kinesis-data-firehose/msk-serverless-firehose-s3-stack](./kinesis-data-firehose/msk-serverless-firehose-s3-stack/) | ![msk-serverless-firehose-s3-arch](./kinesis-data-firehose/msk-serverless-firehose-s3-stack/msk-serverless-firehose-s3-arch.svg) | msk serverless, kinesis firehose, s3, bastion host |
+| [kinesis-data-firehose/firehose-to-iceberg-stack](./kinesis-data-firehose/firehose-to-iceberg-stack/) | ![firehose-to-iceberg-arch](./kinesis-data-firehose/firehose-to-iceberg-stack/firehose-to-iceberg-arch.svg) | kinesis firehose, lambda, s3, Apache Iceberg |
 | [kinesis-data-streams/to-kinesis-data-firehose](./kinesis-data-streams/to-kinesis-data-firehose/) | ![amazon-ekk-stack-arch](./kinesis-data-streams/to-kinesis-data-firehose/kinesis_streams_to_firehose_to_s3.svg) | kinesis data streams, kinesis firehose, s3 |
 | [kinesis-data-analytics-for-flink/msk-replication](./kinesis-data-analytics/kda-flink/msk-replication/) | ![kda-flink-msk-replication](./kinesis-data-analytics/kda-flink/msk-replication/kda-flink-msk-replication.svg) | kinesis data analytics for flink, msk |
 | [lakeformation](./lakeformation/) | Granting AWS Lake Formation permissions on Data Catalog Resources | glue data catalog, lakeformation |
@@ -79,17 +84,23 @@ This repository contains a set of [AWS Cloud Development Kit](https://docs.aws.a
 | [lambda/alb-path-routing-lambda](./lambda/alb-path-routing-lambda/) | ![alb-path-routing-lambda](./lambda/alb-path-routing-lambda/aws-alb-path-routing-lambda-arch.svg) | lambda, application load balancer |
 | [lambda/async-invoke](./lambda/async-invoke/) | ![aws-lambda-async-invocation](./lambda/async-invoke/aws-lambda-async-invocation.svg) | lambda, sns, event-bridge |
 | [lambda/lambda-custom-container](./lambda/lambda-custom-container/) | ![aws-lambda-custom-container](./lambda/lambda-custom-container/aws-lambda-custom-container.svg) | lambda, ecr, custom container |
-| [memorydb-for-redis](./memorydb/redis-cluster) | ![memorydb-for-redis](./memorydb/redis-cluster/amazon-memorydb.svg) | memorydb |
+| [memorydb-for-valkey](./memorydb/valkey-cluster) | ![memorydb-for-valkey](./memorydb/valkey-cluster/amazon-memorydb-for-valkey.svg) | memorydb for Valkey |
+| [memorydb-for-redis](./memorydb/redis-cluster) | ![memorydb-for-redis](./memorydb/redis-cluster/amazon-memorydb.svg) | memorydb for Redis OSS |
 | [memorydb-for-redis for vector search](./memorydb/vector-search) | ![memorydb-for-redis-for-vectorsearch](./memorydb/vector-search/amazon-memorydb.svg) | memorydb for vector search |
+| [memorydb-multi-region-cluster](./memorydb/multi-region-cluster) | ![memorydb-multi-region-cluster](./memorydb/multi-region-cluster/amazon-memorydb-multi-region-cluster.svg) | memorydb multi-region cluster |
 | [msk](./msk/) | ![msk-arch](./msk/msk-arch.svg) | msk(kafka) |
 | [msk_aplha](./msk_alpha/) | ![msk-arch](./msk_alpha/msk-arch.svg) | msk(kafka) |
 | [msk-serverless](./msk-serverless/) | ![msk-serverless-arch](./msk-serverless/msk-serverless-arch.svg) | msk serverless(kafka) |
 | [mwaa(airflow)](./mwaa/) | ![mwaa-arch](./mwaa/mwaa-arch.svg) | mwaa(airflow) |
 | [neptune](./neptune/) | ![neptune-arch](./neptune/neptune-arch.svg) | sagemaker, neptune |
+| [neptune-serverless](./neptune-serverless/) | ![neptune-serverless-arch](./neptune-serverless/neptune-serverless-arch.svg) | sagemaker, neptune serverless |
+| [neptune-analytics](./neptune-analytics/) | ![neptune-analytics-arch](./neptune-analytics/neptune-analytics-arch.svg) | sagemaker, neptune-analytics |
 | [rds/aurora_mysql](./rds/aurora_mysql/) | ![aurora_mysql](./rds/aurora_mysql/aurora_mysql-arch.svg) | aurora mysql, secrets manager |
 | [rds/aurora_postgresql](./rds/aurora_postgresql/) | ![aurora_postgresql](./rds/aurora_postgresql/aurora_postgresql-arch.svg) | aurora postgresql, secrets manager |
 | [rds/mariadb](./rds/mariadb/) | ![mariadb-arch](./rds/mariadb/mariadb-arch.svg) | mariadb, secrets manager |
+| [rds/mysql](./rds/mysql/) | ![mysql-arch](./rds/mysql/mysql-arch.svg) | mysql, secrets manager |
 | [rds/rds_proxy-aurora_mysql](./rds/rds_proxy-aurora_mysql/) | ![rds_proxy-aurora_mysql](./rds/rds_proxy-aurora_mysql/rds_proxy-aurora_mysql-arch.svg) | rds-proxy, aurora mysql, secrets manager |
+| [rds/nlb-aurora_mysql](./rds/nlb-aurora_mysql/) | ![nlb-aurora_mysql](./rds/nlb-aurora_mysql/nlb_for_aurora_mysql-arch.svg) | network load balancer (nlb), aurora mysql, secrets manager |
 | [rds/nginx-rds_proxy-aurora_mysql](./rds/nginx-rds_proxy-aurora_mysql/) | ![nginx-rds_proxy-aurora_mysql](./rds/nginx-rds_proxy-aurora_mysql/nginx-rds-proxy-aurora_mysql-arch.svg) | NGINX, aurora mysql, secrets manager |
 | [rds/sagemaker-aurora_mysql](./rds/sagemaker-aurora_mysql/) | ![sagemaker-aurora_mysql](./rds/sagemaker-aurora_mysql/mysql-sagemaker-arch.svg) | aurora mysql, secrets manager, sagemaker notebook |
 | [rds/sagemaker-aurora_postgresql](./rds/sagemaker-aurora_postgresql/) | ![sagemaker-aurora_postgresql](./rds/sagemaker-aurora_postgresql/postgresql-sagemaker-arch.svg) | aurora postgresql, secrets manager, sagemaker notebook |
